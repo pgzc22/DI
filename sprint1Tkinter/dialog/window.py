@@ -1,16 +1,18 @@
-from tkinter import ttk, Button
+import tkinter as tk
+from yes_window import YesWindow
+from no_window import NoWindow
 
 class MainWindow:
-    def on_button_click(self):
-        pass
-    def __init__(self, root):
-        self.root = root
+    root = tk.Tk()
+    root.title("Ejemplo de pack")
 
-        self.frame = ttk.Frame(self.root)
-        self.frame.pack()
+    label1 = tk.Label(root, text="wtv")
 
-        self.label = ttk.Label(self.frame, text="Este mensaje es poco importante")
-        self.label.pack()
+    button1 = tk.Button(root, text="Sí", command= YesWindow.yesWindow)
+    button2 = tk.Button(root, text="No", command= NoWindow.noWindow)
 
-        self.button = ttk.Button(self.root, text="Ok", command= self.on_button_click)
-        self.button.pack()
+    label1.pack(side="top")
+    button1.pack(side="left", fill="both", expand=True)
+    button2.pack(side="right", fill="both", expand=True)
+
+    root.mainloop()
