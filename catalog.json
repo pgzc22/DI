@@ -1,0 +1,27 @@
+[
+{
+"name": "Emperor Ku",
+"description": "Emperor Ku was not the most important of the Five Emperors, so it was not considered as one of the Three Sovereigns",
+"image_url": "https://github.com/pgzc22/DI/blob/master/recursos/Emperor_Ku.png",
+},
+{
+"name": "Emperor Shun",
+"description": "Emperor Ku was not the most important of the Five Emperors, so it was not considered as one of the Three Sovereigns",
+"image_url": "https://raw.githubusercontent.com/pgzc22/DI/master/recursos/EmperorShun.png",
+},
+{
+"name": "Emperor Yao",
+"description": "Emperor Ku was not the most important of the Five Emperors, so it was not considered as one of the Three Sovereigns",
+"image_url": "https://raw.githubusercontent.com/pgzc22/DI/blob/master/recursos/EmperorYao.png",
+},
+{
+"name": "Emperor Zhuanxu",
+"description": "Emperor Ku was not the most important of the Five Emperors, so it was not considered as one of the Three Sovereigns",
+"image_url": "https://raw.githubusercontent.com/pgzc22/DI/blob/master/recursos/EmperorZhuanxu.png",
+},
+{
+"name": "Yellow Emperor",
+"description": "The Yellow Emperor was the most \nimportant of the Five Emperors, \nto the point it was considered as \none of the Three Sovereigns",
+"image_url": "https://raw.githubusercontent.com/pgzc22/DI/blob/master/recursos/Yellowemperor.png",
+}
+]
