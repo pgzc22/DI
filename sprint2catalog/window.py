@@ -10,7 +10,7 @@ class MainWindow:
     # Define a method that will be called when a button is clicked. 
     # This method creates a new DetailWindow with the details of the clicked cell.
     def on_button_clicked(self, cell):
-        DetailWindow(cell.get("name"), cell.get("description"), self.load_image_from_url(cell.get("image_url")))
+        DetailWindow(cell)
     def __init__(self,root, json_data):
         # Set the title of the root window
         root.title("MainWindow")
