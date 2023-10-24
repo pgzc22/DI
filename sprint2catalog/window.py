@@ -14,6 +14,16 @@ class MainWindow:
     def __init__(self,root, json_data):
         # Set the title of the root window
         root.title("MainWindow")
+        # Create a menu bar
+        menubar = tk.Menu(root)
+        root.config(menu=menubar)
+        # Create a menu and add it to the menu bar
+        help_menu = tk.Menu(menubar, tearoff=False)
+        menubar.add_cascade(label="Ayuda", menu=help_menu)
+        # Add a command to the menu
+        help_menu.add_command(
+            label="Acerca de",
+            command=self.show_about)
         self.cells=[]
         # For each item in json_data, create a new Cell with the name, description, and image URL from the item.
         # Add the new Cell to the cells list.
@@ -38,3 +48,5 @@ class MainWindow:
         x=(root.winfo_screenwidth() - width)/2
         y=(root.winfo_screenheight() - height)/2
         root.geometry(f"+{int(x)}+{int(y)}")
+    def show_about(self):
+        messagebox.showinfo("Acerca del desarrollador", "El desarrollador desearía que no lloviese")
