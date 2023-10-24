@@ -29,3 +29,12 @@ class MainWindow:
             label = ttk.Label(root, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
             label.grid(row=i, column=0)
             label.bind("<Button-1>", lambda event, cell=cell: self.on_button_clicked(cell))
+        
+        width=int(180)
+        height=int(400)
+        #Sets the window size
+        root.geometry(str(width)+"x"+str(height))
+        #Positions the window in the middle of the screen
+        x=(root.winfo_screenwidth() - width)/2
+        y=(root.winfo_screenheight() - height)/2
+        root.geometry(f"+{int(x)}+{int(y)}")

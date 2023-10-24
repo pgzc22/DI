@@ -14,7 +14,15 @@ class DetailWindow:
         root.title("DetailWindow")
         label1 = ttk.Label(root, text=cell.title)
         label2 = ttk.Label(root, image=cell.image_tk)
-        label3 = ttk.Label(root, text=cell.description)
+        label3 = ttk.Label(root, text=cell.description, wraplength=160)
         label1.pack(side="top")
         label2.pack()
-        label3.pack(side="bottom")
+        label3.pack()
+        width=int(160)
+        height=int(300)
+        #Sets the window size
+        root.geometry(str(width)+"x"+str(height))
+        #Positions the window in the middle of the screen
+        x=(root.winfo_screenwidth() - width)/2
+        y=(root.winfo_screenheight() - height)/2
+        root.geometry(f"+{int(x)}+{int(y)}")
