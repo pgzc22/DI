@@ -12,6 +12,7 @@ class MainWindow:
     def on_button_clicked(self, cell):
         DetailWindow(cell)
     def __init__(self,root, json_data):
+        self.root=root
         # Set the title of the root window
         root.title("MainWindow")
         # Create a menu bar
@@ -24,6 +25,7 @@ class MainWindow:
         help_menu.add_command(
             label="Acerca de",
             command=self.show_about)
+        
         self.cells=[]
         # For each item in json_data, create a new Cell with the name, description, and image URL from the item.
         # Add the new Cell to the cells list.
@@ -32,11 +34,34 @@ class MainWindow:
             description=i.get("description")
             url=i.get("image_url")
             self.cells.append(Cell(name, description, url))
+        # Create a canvas
+        self.canvas = tk.Canvas(self.root)
+        # Create a scrollbar
+        self.scrollbar = tk.Scrollbar(self.root, orient="vertical", command=self.canvas.yview)
+        self.scrollable_frame = tk.Frame(self.canvas)
+        self.scrollable_frame.bind(
+            "<Configure>",
+            lambda e: self.canvas.configure(
+                scrollregion=self.canvas.bbox("all")
+            )
+        )
+        # Add the frame to the canvas's scrollable region.
+        self.canvas.create_window((0, 0), window=self.scrollable_frame, anchor='nw')
+        # Configure the canvas to use the scrollbar.
+        self.canvas.configure(yscrollcommand=self.scrollbar.set)
+        self.canvas.grid(row=0, column=0, sticky="nsew")
+        self.scrollbar.grid(row=0, column=1, sticky='ns')
+        self.root.grid_rowconfigure(0, weight=1)
+        self.root.grid_columnconfigure(0, weight=1)
+
         # For each cell in cells, create a new Label with the cell's image and title.
         # Add the Label to the root window's grid.
         # Bind the Label's <Button-1> (left mouse button) event to the on_button_clicked method.
         for i, cell in enumerate(self.cells):
-            label = ttk.Label(root, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
+            # Creating a frame for the scrollbar
+            frame = tk.Frame(self.scrollable_frame)
+            frame.pack(pady=10)
+            label = ttk.Label(frame, image=cell.image_tk, text=cell.title, compound=tk.BOTTOM)
             label.grid(row=i, column=0)
             label.bind("<Button-1>", lambda event, cell=cell: self.on_button_clicked(cell))
         
