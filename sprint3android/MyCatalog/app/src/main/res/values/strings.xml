@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">My Catalog</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Flipflapping app</string>
+    <string name="nav_header_subtitle">It flips and it flaps</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_detail">Detalle</string>
+    <string name="menu_about">Acerca de</string>
 </resources>

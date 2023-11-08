@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_detail">
+
+    <fragment
+        android:id="@+id/nav_catalog"
+        android:name="com.example.mycatalog.ui.catalog.CatalogFragment"
+        android:label="Catálogo"
+        tools:layout="@layout/activity_catalog">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detail"
+        android:name="com.example.mycatalog.ui.detail.DetailFragment"
+        android:label="Detalle"
+        tools:layout="@layout/activity_detail">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mycatalog.ui.about.AboutFragment"
+        android:label="Sobre"
+        tools:layout="@layout/activity_about">
+    </fragment>
+
+</navigation>

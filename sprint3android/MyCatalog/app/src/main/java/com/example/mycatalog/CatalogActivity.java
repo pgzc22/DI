@@ -21,7 +21,7 @@ public class CatalogActivity extends AppCompatActivity {
         // Call the superclass's onCreate method and pass in the saved state of the application
         super.onCreate(savedInstanceState);
         // Set the layout for this activity as activity_main
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_catalog);
         // Locate the button in our layout by its ID and assign it to our toDetailButton member variable
         toDetailButton = findViewById(R.id.button_to_detail);
         // Set an OnClickListener for the button
