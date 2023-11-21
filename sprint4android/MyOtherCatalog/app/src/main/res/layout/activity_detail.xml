@@ -7,7 +7,7 @@
     tools:context=".DetailActivity">
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -24,12 +24,11 @@
         android:layout_height="200dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"/>
+        app:layout_constraintTop_toBottomOf="@id/name"/>
     <TextView
-        android:id="@+id/descripcion"
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
