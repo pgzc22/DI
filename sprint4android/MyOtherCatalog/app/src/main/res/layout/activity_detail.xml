@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Flip"
-        style="@style/GoldenishText"
+        style="@style/BlueText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -34,7 +34,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:text="Flap"
-        style="@style/GoldenishText"
+        style="@style/BlueText"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

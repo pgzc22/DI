@@ -35,7 +35,14 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         Activity activity = this;
         // Creating a new JsonArrayRequest to get JSON data from a URL
-        JsonArrayRequest request = new JsonArrayRequest(
+        JsonArrayRequest request = requestArray (recyclerView, activity);
+        // Creating a RequestQueue
+        RequestQueue cola = Volley.newRequestQueue(this);
+        // Adding the request to the RequestQueue
+        cola.add(request);
+    }
+    public JsonArrayRequest requestArray (RecyclerView recyclerView, Activity activity) {
+        return new JsonArrayRequest(
                 Request.Method.GET,
                 "https://raw.githubusercontent.com/pgzc22/DI/master/catalog.json",
                 null,
@@ -70,9 +77,5 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-        // Creating a RequestQueue
-        RequestQueue cola = Volley.newRequestQueue(this);
-        // Adding the request to the RequestQueue
-        cola.add(request);
     }
 }

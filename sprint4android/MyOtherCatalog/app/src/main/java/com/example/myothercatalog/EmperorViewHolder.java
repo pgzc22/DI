@@ -36,6 +36,17 @@ public class EmperorViewHolder extends RecyclerView.ViewHolder {
         textView.setText(data.getName());
         // Downloading the image from the URL and setting it to the ImageView
         Util.downloadBitmapToImageView(data.getImageUrl(), this.imageView);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Context context = v.getContext();
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("name", data.getName());
+                intent.putExtra("description", data.getDescription());
+                intent.putExtra("url", data.getImageUrl());
+                context.startActivity(intent);
+            }
+        });
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
